@@ -136,7 +136,7 @@ const EmployeeForm = ({ isOpen, onClose, addEmployee, editingEmployee, employees
   );
 };
 
-const EmployeeTable = ({ employees, searchQuery, viewEmployee, editEmployee, handleSalary, handleLeave, deleteEmployee }) => {
+const EmployeeTable = ({ employees, searchQuery, viewEmployee, editEmployee, handleSalary, handleLeave, deleteEmployee, updateEmployee }) => {
   const [selectedEmployee, setSelectedEmployee] = useState(null);
 
   const filteredEmployees = employees.filter((emp) =>
@@ -227,6 +227,7 @@ const EmployeeTable = ({ employees, searchQuery, viewEmployee, editEmployee, han
                 </tr>
               </tbody>
             </table>
+            <button className="update-btn" onClick={() => updateEmployee(selectedEmployee)}>Update</button>
           </div>
         </div>
       )}
@@ -244,7 +245,7 @@ const SearchBar = ({ searchQuery, setSearchQuery }) => {
         onChange={(e) => setSearchQuery(e.target.value)}
       />
     </div>
-    );
+  );
 };
 
 export { EmployeeForm, EmployeeTable, SearchBar }; // Exporting all components
