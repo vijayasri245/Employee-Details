@@ -140,6 +140,29 @@ body {
   background-color: #c82333;
 }
 
+/* Update Button - Purple */
+.update-btn {
+  background-color: #9370DB; /* Purple */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin: 10px auto;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 5px;
+  font-weight: bold;
+  display: block;
+}
+
+.update-btn:hover {
+  background-color: #8060c0; /* Darker Purple */
+}
+
+.update-btn:active {
+  background-color: #7050b0;
+  transform: translateY(1px);
+}
+
 /* View Card Overlay */
 .view-card-overlay {
   position: fixed;
@@ -291,5 +314,14 @@ button[type="submit"]:hover {
 
   .employee-form {
     width: 95%;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-bar input {
+    width: 100%;
   }
 }
